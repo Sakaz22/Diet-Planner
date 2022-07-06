@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="/node_modules/bootstrap/scss/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Diet Planner</title>
+</head>
+<body>
+    <div class="welcome__section shadow-sm">
+        <h1 class="bg-primary text-light text-center p-3">Diet planner</h1>
+        <p class="bg-info text-light text-center p-3">This app will help you to choose meals for you!</p>
+    </div>
+    <div class="list__area d-flex flex-row justify-content-center">
+        <div class="list_container p-3 m-3 card">
+            <div class="header">
+                <h3 class="bg-dark text-light p-3">Add Carbohydrates</h3>
+            </div>
+            <div class="lists">
+                <div class="output">
+                    <button onclick="addcarbs()" class="btn btn-outline-dark">Add</button>
+                    <div class="selected">
+                        <h4>Selected Carbohydrates:</h4>
+                        <li class="list-unstyled" id="carbs"></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list_container p-3 m-3 card">
+            <div class="header">
+                <h3 class="bg-dark text-light p-3">Add Meat/Protein</h3>
+            </div>
+            <div class="lists">
+                <div class="output">
+                    <button onclick="addprotein()" class="btn btn-outline-dark">Add</button>
+                    <div class="selected">
+                        <h4>Selected Meat/Protein:</h4>
+                        <li class="list-unstyled" id="protein"></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list_container p-3 m-3 card">
+            <div class="header">
+                <h3 class="bg-dark text-light p-3">Add Vegetables</h3>
+            </div>
+            <div class="lists">
+                <div class="output">
+                    <button onclick="addvegetables()" class="btn btn-outline-dark">Add</button>
+                    <div class="selected">
+                        <h4>Selected Vegetables:</h4>
+                        <li class="list-unstyled" id="veges"></li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="end-result d-flex justify-content-center m-3">
+        <button onclick="display()" class="btn btn-outline-primary">Randomise!</button>
+    </div>
+    <div class="result">
+        <li id="randpresultcarbs"></li>
+        <li id="randpresultprotein"></li>
+        <li id="randpresultveges"></li>
+    </div>
+</body>
+</html>
