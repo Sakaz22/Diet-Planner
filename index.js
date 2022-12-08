@@ -2,6 +2,75 @@ let carbohydrates = []
 let meat = []
 let protein = []
 let vegetables = []
+let suggestedcarbs = ["Rice","Spaghetti","Potatoes"];
+let suggestedprotein = ["Pork","Beef","Chicken"];
+let suggestedveges = ["Spinach","Brocolli","Potatoes",];
+let sugcarbs = []
+let sugprotein = []
+let sugveges = []
+
+//carbs
+function item1 (){
+  let carbsBtn = document.getElementById("itemOne");
+  sugcarbs = carbohydrates
+  sugcarbs.push(carbsBtn.textContent)
+  document.getElementById("carbs").innerText = carbsBtn.textContent;
+  
+}
+function item2 (){
+  let carbsBtn = document.getElementById("itemTwo");
+  sugcarbs = carbohydrates
+  sugcarbs.push(carbsBtn.textContent)
+  document.getElementById("carbs").innerText = carbsBtn.textContent;
+}
+function item3 (){
+  let carbsBtn = document.getElementById("itemThree");
+  sugcarbs = carbohydrates
+  sugcarbs.push(carbsBtn.textContent)
+  document.getElementById("carbs").innerText = carbsBtn.textContent;
+}
+
+//protein
+function item1P (){
+  let proteinBtn = document.getElementById("itemOneP");
+  sugprotein = protein
+  sugprotein.push(proteinBtn.textContent)
+  document.getElementById("protein").innerText = proteinBtn.textContent;
+  
+}
+function item2P (){
+  let proteinBtn = document.getElementById("itemTwoP");
+  sugprotein = protein
+  sugprotein.push(proteinBtn.textContent)
+  document.getElementById("protein").innerText = proteinBtn.textContent;
+}
+function item3P (){
+  let proteinBtn = document.getElementById("itemThreeP");
+  sugprotein = protein
+  sugprotein.push(proteinBtn.textContent)
+  document.getElementById("protein").innerText = proteinBtn.textContent;
+}
+
+//veges
+function item1V (){
+  let vegesBtn = document.getElementById("itemOneV");
+  sugveges = vegetables
+  sugveges.push(vegesBtn.textContent)
+  document.getElementById("veges").innerText = vegesBtn.textContent;
+  
+}
+function item2V (){
+  let vegesBtn = document.getElementById("itemTwoV");
+  sugveges = vegetables
+  sugveges.push(vegesBtn.textContent)
+  document.getElementById("veges").innerText = vegesBtn.textContent;
+}
+function item3V (){
+  let vegesBtn = document.getElementById("itemThreeV");
+  sugveges = vegetables
+  sugveges.push(proteinBtn.textContent)
+  document.getElementById("veges").innerText = vegesBtn.textContent;
+}
 
   function addcarbs () {
     // create a new div element
@@ -19,6 +88,8 @@ let vegetables = []
     document.getElementById("carbs").innerText = carbohydrates
     // add the newly created element and its content into the DOM
   }
+
+
   function addprotein () {
     // create a new div element
     const create = document.createElement("li");
