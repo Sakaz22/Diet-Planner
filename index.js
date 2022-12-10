@@ -1,13 +1,11 @@
 let carbohydrates = []
-let meat = []
 let protein = []
 let vegetables = []
-let suggestedcarbs = ["Rice","Spaghetti","Potatoes"];
-let suggestedprotein = ["Pork","Beef","Chicken"];
-let suggestedveges = ["Spinach","Brocolli","Potatoes",];
 let sugcarbs = []
 let sugprotein = []
 let sugveges = []
+
+gsap.from('#one',{duration:1, y:'-100%'})
 
 //carbs
 function item1 (){
@@ -15,19 +13,27 @@ function item1 (){
   sugcarbs = carbohydrates
   sugcarbs.push(carbsBtn.textContent)
   document.getElementById("carbs").innerText = carbsBtn.textContent;
-  
+  if(carbsBtn.onclick){
+    carbsBtn.disabled = true;
+  }
 }
 function item2 (){
   let carbsBtn = document.getElementById("itemTwo");
   sugcarbs = carbohydrates
   sugcarbs.push(carbsBtn.textContent)
   document.getElementById("carbs").innerText = carbsBtn.textContent;
+  if(carbsBtn.onclick){
+    carbsBtn.disabled = true;
+  }
 }
 function item3 (){
   let carbsBtn = document.getElementById("itemThree");
   sugcarbs = carbohydrates
   sugcarbs.push(carbsBtn.textContent)
   document.getElementById("carbs").innerText = carbsBtn.textContent;
+  if(carbsBtn.onclick){
+    carbsBtn.disabled = true;
+  }
 }
 
 //protein
@@ -36,19 +42,27 @@ function item1P (){
   sugprotein = protein
   sugprotein.push(proteinBtn.textContent)
   document.getElementById("protein").innerText = proteinBtn.textContent;
-  
+  if(proteinBtn.onclick){
+    proteinBtn.disabled = true;
+  }
 }
 function item2P (){
   let proteinBtn = document.getElementById("itemTwoP");
   sugprotein = protein
   sugprotein.push(proteinBtn.textContent)
   document.getElementById("protein").innerText = proteinBtn.textContent;
+  if(proteinBtn.onclick){
+    proteinBtn.disabled = true;
+  }
 }
 function item3P (){
   let proteinBtn = document.getElementById("itemThreeP");
   sugprotein = protein
   sugprotein.push(proteinBtn.textContent)
   document.getElementById("protein").innerText = proteinBtn.textContent;
+  if(proteinBtn.onclick){
+    proteinBtn.disabled = true;
+  }
 }
 
 //veges
@@ -57,6 +71,9 @@ function item1V (){
   sugveges = vegetables
   sugveges.push(vegesBtn.textContent)
   document.getElementById("veges").innerText = vegesBtn.textContent;
+  if(vegesBtn.onclick){
+    vegesBtn.disabled = true;
+  }
   
 }
 function item2V (){
@@ -64,12 +81,18 @@ function item2V (){
   sugveges = vegetables
   sugveges.push(vegesBtn.textContent)
   document.getElementById("veges").innerText = vegesBtn.textContent;
+  if(vegesBtn.onclick){
+    vegesBtn.disabled = true;
+  }
 }
 function item3V (){
   let vegesBtn = document.getElementById("itemThreeV");
   sugveges = vegetables
-  sugveges.push(proteinBtn.textContent)
+  sugveges.push(vegesBtn.textContent)
   document.getElementById("veges").innerText = vegesBtn.textContent;
+  if(vegesBtn.onclick){
+    vegesBtn.disabled = true;
+  }
 }
 
   function addcarbs () {
