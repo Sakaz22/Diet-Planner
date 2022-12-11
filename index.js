@@ -5,11 +5,33 @@ let sugcarbs = []
 let sugprotein = []
 let sugveges = []
 
-gsap.from('#one',{duration:1, y:'-100%'})
+function preloadImage(img) {
+  const src = img.getAttribute("data-src");
+  if(!src){
+    return;
+  }
+
+  img.src = src;
+}
+
+const imgOptions = {};
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+entries.forEach(entry => {
+  if (!entry.isIntersection){
+    return;
+  } else {
+    preloadImage(entry.target);
+    imgObserver.unobserve(entry.target)
+  }
+})
+}, imgOptions);
+images.forEach(image => {
+  imgObserver.observe(image)
+})
 
 //carbs
 function item1 (){
-  let carbsBtn = document.getElementById("itemOne");
+  let carbsBtn = document.getElementById("itemOne"); 
   sugcarbs = carbohydrates
   sugcarbs.push(carbsBtn.textContent)
   document.getElementById("carbs").innerText = carbsBtn.textContent;
